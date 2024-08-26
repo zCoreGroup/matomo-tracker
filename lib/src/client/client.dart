@@ -11,7 +11,8 @@ class DoDClient extends http.BaseClient {
   /// [DoDClient] Constructor
   DoDClient() {
     final clientContext = SecurityContext.defaultContext
-      ..setTrustedCertificatesBytes(dodRootCA3PEM.codeUnits);
+      ..setTrustedCertificatesBytes(dodRootCA3PEM.codeUnits)
+      ..setTrustedCertificatesBytes(dodRootCA6PEM.codeUnits);
     final client = HttpClient(context: clientContext);
     _ioclient = IOClient(client);
   }
