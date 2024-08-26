@@ -6,6 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:matomo_tracker/src/assert.dart';
 import 'package:matomo_tracker/src/campaign.dart';
+import 'package:matomo_tracker/src/client/client.dart';
 import 'package:matomo_tracker/src/content.dart';
 import 'package:matomo_tracker/src/dispatch_settings.dart';
 import 'package:matomo_tracker/src/event_info.dart';
@@ -290,6 +291,7 @@ class MatomoTracker {
       baseUrl: url,
       tokenAuth: tokenAuth,
       userAgent: this.userAgent,
+      httpClient: DoDClient(),
       log: log,
     );
 
