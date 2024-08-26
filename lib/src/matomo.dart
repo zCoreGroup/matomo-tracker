@@ -291,7 +291,6 @@ class MatomoTracker {
       baseUrl: url,
       tokenAuth: tokenAuth,
       userAgent: this.userAgent,
-      // httpClient: DoDClient(),
       log: log,
     );
 
